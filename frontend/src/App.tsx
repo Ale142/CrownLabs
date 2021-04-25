@@ -15,7 +15,7 @@ function App() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        textAlign: 'center'
+        textAlign: 'center',
       }}
     >
       <BrowserRouter basename={PUBLIC_URL}>

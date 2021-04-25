@@ -3,15 +3,13 @@ import { Story, Meta } from '@storybook/react';
 
 export default {
   title: 'Components/Example',
-  component: Example
+  component: Example,
+  argTypes: { onClick: { action: 'clicked' } },
 } as Meta;
 
-const defaultArgs: IExampleProps = {
+const defaultArgs = {
   text: 'Example',
   disabled: false,
-  onClick: () => {
-    console.log('Clicked default');
-  }
 };
 
 //👇 We create a “template” of how args map to rendering
