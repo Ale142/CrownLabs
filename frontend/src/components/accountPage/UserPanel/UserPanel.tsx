@@ -6,10 +6,10 @@ import UserInfo from '../UserInfo/UserInfo';
 const { TabPane } = Tabs;
 const { Column } = Table;
 export interface IUserPanelProps {
-  fullName: string;
+  firstName: string;
+  lastName: string;
   username: string;
   email: string;
-  studentID: string;
   avatar?: string;
   sshKeys?: { name: string; key: string }[];
 }
@@ -22,9 +22,9 @@ const UserPanel: FC<IUserPanelProps> = props => {
       <Col xs={24} sm={8} className="text-center">
         <Avatar size="large" icon={avatar ?? <UserOutlined />} />
         <p>
-          {otherInfo.fullName}
+          {otherInfo.firstName} {otherInfo.lastName}
           <br />
-          <strong>{otherInfo.studentID}</strong>
+          <strong>{otherInfo.username}</strong>
         </p>
       </Col>
       <Col xs={24} sm={16} className="px-4 ">
