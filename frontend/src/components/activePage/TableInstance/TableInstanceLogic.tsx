@@ -46,6 +46,7 @@ const TableInstanceLogic: FC<ITableInstanceLogicProps> = ({ ...props }) => {
   const { data: sshKeysResult } = useSshKeysQuery({
     variables: { tenantId: userId ?? '' },
     notifyOnNetworkStatusChange: true,
+    fetchPolicy: 'network-only',
   });
 
   useEffect(() => {
